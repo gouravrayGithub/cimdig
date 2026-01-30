@@ -100,15 +100,18 @@ export default function Dig({equipment}: DigProps) {
                        minZoom={0.2}
                        maxZoom={2}
             >
-                <Panel position="top-center" className="w-1/2">
+                <Panel position="top-center" className="w-full max-w-[500px] ">
                     <SearchBar />
                 </Panel>
-                <Panel position="top-right">
+                <Panel position="top-right" className="hidden sm:block">
                     <div
                         className={'flex space-x-2'}>
                         <Button onClick={() => onLayout('LR')}>Reset Layout</Button>
                     </div>
                 </Panel>
+                
+
+                
                 <Background bgColor="#eeee"/>
                 <MiniMap pannable={true} zoomable={false}/>
                 <Controls/>
